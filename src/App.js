@@ -1,15 +1,12 @@
 import './App.css'
-import AlertDismissible from './components/AlertDismissible'
-import TypesExample from './components/TypesExample'
+import './styles.css'
+import AppRouter from './routes/AppRouter'
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <h3>Hello Boys!</h3>
-      </header>
-
-    </div>
+    <>
+      <AppRouter />
+    </>
   )
 }
 
