@@ -10903,8 +10903,9 @@ p {
   color: #fff;
   letter-spacing: 0.0625em;
 }
+/* This is the navbar on hover color change */
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #ffc800;
+  color: #B2A496;
 }
 
 @media (min-width: 992px) {
@@ -10912,7 +10913,7 @@ p {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border: none;
-    background-color: transparent;
+    background-color: #003B29; 
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
@@ -10947,7 +10948,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("./images/bck-image-1.jpg");  
+  background-image: url("./assets/images/bck-image-1.jpg");  
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -11257,7 +11258,7 @@ header.masthead .masthead-heading {
 
 section#contact {
   background-color: #212529;
-  background-image: url("./images/map-image.png");
+  background-image: url("./assets/images/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
 }

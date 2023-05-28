@@ -1,13 +1,19 @@
 import React from 'react'
+import nav_image from "./../../assets/images/apple-touch-icon.png"
+import './../../assets/css/Navbar.css'
 
 
 const Navbar = () => {
   return (
-    <nav className='navbar navbar-expand-lg navbar-dark fixed-top' id='mainNav'>
+    <nav
+      className='navbar navbar-expand-lg navbar-dark fixed-top'
+      id='mainNav'
+    >
       <div className='container'>
         <a className='navbar-brand' href='#page-top'>
-          <img src='assets/img/navbar-logo.svg' alt='...' />
+          <img src={nav_image} alt='...' />
         </a>
+        <h3 className='logo'>Just Klean</h3>
         <button
           className='navbar-toggler'
           type='button'
