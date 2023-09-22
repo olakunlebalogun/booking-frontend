@@ -1,6 +1,14 @@
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+
 
 const Signup = () => {
+  	const navigate = useNavigate()
+    const onCreateAccount = () => {
+      // Create a new account by interrracting with the appropriate endpoint
+      // Route to login
+      navigate('/login')
+    }
   return (
     <div className='bg-primary'>
       <div id='layoutAuthentication'>
@@ -78,19 +86,21 @@ const Signup = () => {
                         </div>
                         <div className='mt-4 mb-0'>
                           <div className='d-grid'>
-                            <a
+                            <button
                               className='btn btn-primary btn-block'
-                              href='login.html'
+                              onClick={() => onCreateAccount()}
                             >
                               Create Account
-                            </a>
+                            </button>
                           </div>
                         </div>
                       </form>
                     </div>
                     <div className='card-footer text-center py-3'>
                       <div className='small'>
-                        <a href='login.html'>Have an account? Go to login</a>
+                        <Link to='/login'>
+                          Already have an account? Sign in!
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -99,20 +109,20 @@ const Signup = () => {
             </div>
           </main>
         </div>
-        <div id='layoutAuthentication_footer'>
+        {/* <div id='layoutAuthentication_footer'>
           <footer className='py-4 bg-light mt-auto'>
             <div className='container-fluid px-4'>
               <div className='d-flex align-items-center justify-content-between small'>
                 <div className='text-muted'>Copyright &copy; Your Website 2023</div>
                 <div>
-                  <a href='#'>Privacy Policy</a>
+                  <a href='https:google.com'>Privacy Policy</a>
                   &middot;
                   <a href='#'>Terms &amp; Conditions</a>
                 </div>
               </div>
             </div>
           </footer>
-        </div>
+        </div> */}
       </div>
       <script
         src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js'
