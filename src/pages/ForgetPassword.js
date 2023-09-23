@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
+import './../assets/css/pages/ForgetPassword.css'
 
 const ForgetPassword = () => {
   const navigate = useNavigate()
@@ -10,7 +11,7 @@ const ForgetPassword = () => {
   }
 
   return (
-    <div className='bg-primary'>
+    <div className=''>
       <div id='layoutAuthentication'>
         <div id='layoutAuthentication_content'>
           <main>

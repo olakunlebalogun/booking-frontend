@@ -1,5 +1,8 @@
 import React from 'react'
 
+
+import './../../assets/css/pop-ups/SouthWest.css'
+
 const SouthWest = () => {
   return (
      <div className="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">

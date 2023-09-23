@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import nav_image from "./../../assets/images/apple-touch-icon.png"
-import './../../assets/css/Navbar.css'
+import './../../assets/css/landing-page/Navbar.css'
 
 
 const Navbar = () => {

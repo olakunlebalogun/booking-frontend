@@ -1,5 +1,8 @@
 import React from 'react'
 
+
+import './../../assets/css/pop-ups/Finish.css'
+
 const Finish = () => {
   return (
      <div className="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">

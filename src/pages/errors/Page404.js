@@ -1,4 +1,6 @@
 import React from 'react'
+import './../../assets/css/pages/errors/Page404.css'
+
 
 const Page404 = () => {
   return (

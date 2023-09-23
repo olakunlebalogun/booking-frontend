@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './../../assets/css/landing-page/Contacts.css'
+
 const Contacts = () => {
   return (
       <section className="page-section" id="contact">

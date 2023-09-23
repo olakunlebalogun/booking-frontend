@@ -1,5 +1,6 @@
 import React from 'react'
 
+import './../../assets/css/landing-page/About.css';
 const About = () => {
   return (
     <section className='page-section' id='about'>

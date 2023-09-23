@@ -1,5 +1,8 @@
 import React from 'react'
 
+
+import './../../assets/css/landing-page/Portfolio.css'
+
 const Portfolio = () => {
   return ( 
      <section className="page-section bg-light" id="portfolio">

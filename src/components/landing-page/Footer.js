@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './../../assets/css/landing-page/Footer.css'
+
 const Footer = () => {
   return (
     <footer className='footer py-4'>

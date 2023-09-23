@@ -1,5 +1,8 @@
 import React from 'react'
 
+
+import './../../assets/css/landing-page/Team.css'
+
 const Team = () => {
   return (
     <section className='page-section bg-light' id='team'>

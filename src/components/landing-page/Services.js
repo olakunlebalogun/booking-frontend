@@ -1,5 +1,8 @@
 import React from 'react'
 
+
+import './../../assets/css/landing-page/Services.css'
+
 const Services = () => {
   return (
     <section className='page-section' id='services'>

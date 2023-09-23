@@ -1,5 +1,8 @@
 import React from 'react'
 
+
+import './../../assets/css/admin-page/SideNav.css'
+
 const SideNav = () => {
   return (
     <div className='sb-nav-fixed'>

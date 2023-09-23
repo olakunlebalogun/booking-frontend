@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './../../assets/css/landing-page/Clients.css'
+
 const Clients = () => {
   return (
     <div className='py-5'>

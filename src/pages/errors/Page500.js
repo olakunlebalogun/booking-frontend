@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './../../assets/css/pages/errors/Page500.css'
+
 const Page500 = () => {
   return (
     <div>

@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './../assets/css/pages/Booking.css';
+
 const Booking = () => {
   return (
     <div className="wrapper">

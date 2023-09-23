@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+import './../../assets/css/pop-ups/Explore.css'
 const Explore = () => {
   return (
      <div className="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">

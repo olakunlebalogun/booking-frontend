@@ -1,5 +1,8 @@
 import React from 'react'
 
+
+import './../../assets/css/pop-ups/Lines.css'
+
 const Lines = () => {
   return (
      <div className="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">

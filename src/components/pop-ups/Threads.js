@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './../../assets/css/pop-ups/Threads.css'
+
 const Threads = () => {
   return (
      <div className="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">

@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+import './../../assets/css/admin-page/StaticLayout.css'
 const StaticLayout = () => {
   return (
     <div>

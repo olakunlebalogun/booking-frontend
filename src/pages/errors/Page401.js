@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './../../assets/css/pages/errors/Page401.css'
 const Page401 = () => {
   return (
     <div>

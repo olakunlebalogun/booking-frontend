@@ -1,5 +1,6 @@
 import React from 'react'
 
+import './../../assets/css/landing-page/Masthead.css'
 
 
 const Masthead = () => {
