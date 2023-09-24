@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Landing from '../pages/Landing'
 import Login from './../pages/entrance/Login'
 import Signup from './../pages/entrance/Signup'
@@ -14,7 +14,6 @@ import Dashboard from '../pages/Dashboard'
 
 const AppRouter = () => {
   return (
-    <BrowserRouter>
       <Routes>
         <Route index element={<Login />} />
         <Route path='login' element={<Login />} />
@@ -30,7 +29,6 @@ const AppRouter = () => {
 
 
       </Routes>
-    </BrowserRouter>
   )
 }
 

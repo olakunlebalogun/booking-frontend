@@ -1,49 +1,170 @@
 import React from 'react'
 
-import './../assets/css/pages/Booking.css';
+
+import './../assets/css/pages/Booking.css'
 
 const Booking = () => {
   return (
-    <div className="wrapper">
-			<div className="inner">
-				<div className="image-holder">
-					<img src="images/registration-form-6.jpg" alt=""/>
-				</div>
-				<form action="">
-					<h3>Make An Appointment</h3>
-					<div className="form-row">
-						<input type="text" className="form-control" placeholder="Name"/>
-						<input type="text" className="form-control" placeholder="Mail"/>
-					</div>
-					<div className="form-row">
-						<input type="text" className="form-control" placeholder="Phone"/>
-						<div className="form-holder">
-							<select name="" id="" className="form-control">
-								<option value="" disabled selected>Choose Your ClassName</option>
-								<option value="className 01">ClassName 01</option>
-								<option value="className 02">ClassName 02</option>
-								<option value="className 03">ClassName 03</option>
-							</select>
-							<i className="zmdi zmdi-chevron-down"></i>
-						</div>
-					</div>
-					<textarea name="" id="" placeholder="Message" className="form-control" style="height: 130px;"></textarea>
-					<button>Book Now
-						<i className="zmdi zmdi-long-arrow-right"></i>
-					</button>
-				</form>
-				
-			</div>
-		</div>
+    // <div id='booking' className='section mt-4'>
+    //   <div className='section-center'>
+    //     <div className='container'>
+    //       <div className='row'>
+    //         <div className='booking-form'>
+    //           <div className='form-header mb-4'>
+    //             <h1>Book Your Apppointment</h1>
+    //           </div>
+    //           <form>
+    //             <div class='mb-3'>
+    //               <label for='exampleInputEmail1' class='form-label'>
+    //                 Email address
+    //               </label>
+    //               <input
+    //                 type='email'
+    //                 class='form-control'
+    //                 id='exampleInputEmail1'
+    //                 aria-describedby='emailHelp'
+    //               />
+    //               <div id='emailHelp' class='form-text'>
+    //                 We'll never share your email with anyone else.
+    //               </div>
+    //             </div>
+    //             <div class='mb-3'>
+    //               <label for='exampleInputEmail1' class='form-label'>
+    //                 Email address
+    //               </label>
+    //               <input
+    //                 type='email'
+    //                 class='form-control'
+    //                 id='exampleInputEmail1'
+    //                 aria-describedby='emailHelp'
+    //               />
+    //               <div id='emailHelp' class='form-text'>
+    //                 We'll never share your email with anyone else.
+    //               </div>
+    //             </div>
+    //             <div class='mb-3'>
+    //               <label for='exampleInputPassword1' class='form-label'>
+    //                 Password
+    //               </label>
+    //               <input
+    //                 type='password'
+    //                 class='form-control'
+    //                 id='exampleInputPassword1'
+    //               />
+    //             </div>
+    //             <div class='mb-3 form-check'>
+    //               <input
+    //                 type='checkbox'
+    //                 class='form-check-input'
+    //                 id='exampleCheck1'
+    //               />
+    //               <label class='form-check-label' for='exampleCheck1'>
+    //                 Check me out
+    //               </label>
+    //             </div>
+    //             <button type='submit' class='btn btn-primary'>
+    //               Submit
+    //             </button>
+    //           </form>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
+
+    <div id='booking' className='section'>
+      <div className='section-center'>
+        <div className='container'>
+          <div className='row'>
+            <div className='booking-form'>
+              <div className='form-header'>
+                <h1>Book Your Apppointment</h1>
+              </div>
+              <form>
+                <div className='form-group'>
+                  <span className='form-label'>Email</span>
+                  <input className='form-control' type='text' />
+                </div>
+                <div className='form-group'>
+                  <span className='form-label'>Phone Number</span>
+                  <input className='form-control' type='text' />
+                </div>
+                <div className='row'>
+                  <div className='col-md-12'>
+                    <div className='form-group'>
+                      <span className='form-label'>Appointment Date</span>
+                      <input className='form-control' type='date' />
+                    </div>
+                  </div>
+                </div>
+
+                <div className='form-group'>
+                  <div className='form-checkbox'>
+                    <p>
+                      Select appointment type <span>(Choose atleast one)</span>
+                    </p>
+                    {/* <div class='form-check'>
+                      <input
+                        className='form-check-input'
+                        type='checkbox'
+                        value='nin'
+                        id='flexCheckDefault'
+                        name='app-type'
+                      />
+                      <label
+                        className='form-check-label'
+                        for='flexCheckDefault'
+                      >
+                        Default checkbox
+                      </label>
+                      <input
+                        className='form-check-input'
+                        type='checkbox'
+                        value='bvn'
+                        id='flexCheckChecked'
+                        name='app-type'
+                        checked
+                      />
+                      <label
+                        className='form-check-label'
+                        for='flexCheckChecked'
+                      >
+                        Checked checkbox
+                      </label>
+                    </div> */}
+
+                    <label htmlFor='nin'>
+                      <input
+                        className='form-check-input'
+                        type='checkbox'
+                        value='nin'
+                        id='nin'
+                        name='app-type'
+                      />
+                      <span></span>NIN
+                    </label>
+                    <label htmlFor='bvn'>
+                      <input
+                        className='form-check-input'
+                        type='checkbox'
+                        value='bvn'
+                        id='bvn'
+                        name='app-type'
+                      />
+                      <span></span>BVN
+                    </label>
+                  </div>
+                </div>
+                <div className='form-btn'>
+                  <button className='submit-btn'>Book Appointment</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
 export default Booking
-
-
- {/* // <div classNameName='small'>
-      //   <p>Booking</p>
-      //                   <Link to='/successful-booking'>
-      //                     Go to Booking Succesful
-      //                   </Link>
-      //                 </div> */}
