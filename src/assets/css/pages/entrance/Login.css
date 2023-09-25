@@ -1,3 +1,9 @@
 .txt{
-    color: #fff;
+    color: white;
+}
+#header{
+    text-align: center;
+}
+.rd {
+    border-radius: 10px;
 }
