@@ -10,8 +10,8 @@ const Login = () => {
     }
   return (
     <div  className='section'>
-      <div className='section-center' >
-        <div className='container' >
+      <div className='section-center'>
+        <div className='container'>
           <div className='row'>
             <div className='booking-form'>
               <div className='form-header'id="header">
@@ -20,11 +20,11 @@ const Login = () => {
               <form>
                 <div className='form-group'>
                   <span className='form-label'>Email</span>
-                  <input className='form-control' type='email' />
+                  <input className='form-control' type='email'/>
                 </div>
                 <div className='form-group'>
                   <span className='form-label'>Password</span>
-                  <input className='form-control' type='password' />
+                  <input className='form-control' type='password'/>
                 </div>
                 <div className='form-check mb-3'>
                       <input
