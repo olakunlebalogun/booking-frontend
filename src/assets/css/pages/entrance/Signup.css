@@ -84,7 +84,7 @@
 	position: relative;
 	top: 0px;
 	left: 0px;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	/* color: #2d343b; */
 	color: #fff;
 	font-weight: 700;
@@ -179,7 +179,7 @@
 
 .signup-form .submit-btn {
 	color: #1c2126;
-	background-color: #f7c411;
+	background-color: #009933;
 	font-weight: 700;
 	height: 50px;
 	border: none;
