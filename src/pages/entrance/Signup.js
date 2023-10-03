@@ -3,12 +3,31 @@ import { Link, useNavigate } from 'react-router-dom'
 
 
 import './../../assets/css/pages/entrance/Signup.css'
+import axios from 'axios'
+import { useState } from 'react'
 
 const Signup = () => {
+  const [signUp,setSignUp] = useState({
+    firstName:"",
+    lastName:"",
+    email:"",
+    password:"",
+    userName:"",
+    phone:""
+  });
+
+  const{firstName,lastName,email,password,userName,phone}=signUp;
+  const onInputChange=(e)=>{
+    setSignUp({...signUp,[e.target.name]:e.target.value})
+  }
+
   	const navigate = useNavigate()
-    const onCreateAccount = () => {
+    const onCreateAccount = async (e) => {
+      e.preventDefault();
+      await axios.post("http://localhost:7000/api/v1/auth/signup",signUp)
       // Create a new account by interrracting with the appropriate endpoint
       // Route to login
+      console.log(signUp)
       navigate('/login')
     }
   return (
