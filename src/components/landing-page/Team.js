@@ -2,6 +2,8 @@ import React from 'react'
 
 
 import './../../assets/css/landing-page/Team.css'
+import ghaf_1 from './../../assets/images/ghaf.jpg'
+import oga_2 from './../../assets/images/oga.png'
 
 const Team = () => {
   return (
@@ -10,19 +12,19 @@ const Team = () => {
         <div className='text-center'>
           <h2 className='section-heading text-uppercase'>Our Amazing Team</h2>
           <h3 className='section-subheading text-muted'>
-            Lorem ipsum dolor sit amet consectetur.
+            These are some of the goal driven individuals working tiredlessly to provide pristine services.
           </h3>
         </div>
         <div className='row'>
-          <div className='col-lg-4'>
+          <div className='col-lg-6'>
             <div className='team-member'>
               <img
                 className='mx-auto rounded-circle'
-                src='assets/img/team/1.jpg'
+                src={oga_2}
                 alt='...'
               />
-              <h4>Parveen Anand</h4>
-              <p className='text-muted'>Lead Designer</p>
+              <h4>Oladapo Olatunji</h4>
+              <p className='text-muted'>Chief Executive Officer</p>
               <a
                 className='btn btn-dark btn-social mx-2'
                 href='#!'
@@ -46,15 +48,15 @@ const Team = () => {
               </a>
             </div>
           </div>
-          <div className='col-lg-4'>
+          <div className='col-lg-6'>
             <div className='team-member'>
               <img
                 className='mx-auto rounded-circle'
-                src='assets/img/team/2.jpg'
+                src={ghaf_1}
                 alt='...'
               />
-              <h4>Diana Petersen</h4>
-              <p className='text-muted'>Lead Marketer</p>
+              <h4>Gafar Oladoja</h4>
+              <p className='text-muted'>Chief Operating Officer</p>
               <a
                 className='btn btn-dark btn-social mx-2'
                 href='#!'
@@ -78,7 +80,7 @@ const Team = () => {
               </a>
             </div>
           </div>
-          <div className='col-lg-4'>
+          {/* <div className='col-lg-4'>
             <div className='team-member'>
               <img
                 className='mx-auto rounded-circle'
@@ -109,14 +111,12 @@ const Team = () => {
                 <i className='fab fa-linkedin-in'></i>
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className='row'>
           <div className='col-lg-8 mx-auto text-center'>
             <p className='large text-muted'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
-              eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam
-              corporis ea, alias ut unde.
+            Our team is driven by a shared vision of enhancing convenience and efficiency in the booking/registration process. We work tirelessly to ensure that our website is not just a tool but a trusted partner that helps our users save time, make informed decisions, and access the services they need with ease.
             </p>
           </div>
         </div>

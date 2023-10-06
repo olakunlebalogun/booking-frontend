@@ -20,7 +20,7 @@ const Landing = () => {
       <Portfolio />
       <About />
       <Team />
-      <Clients />
+      {/* <Clients /> */}
       <Contacts />
       <Footer />
     </div>
