@@ -1,6 +1,10 @@
 import React from 'react'
 
 import './../../assets/css/landing-page/About.css';
+import img_1 from './../../assets/images/1.jpg'
+import img_2 from './../../assets/images/2.jpg'
+import img_3 from './../../assets/images/3.jpg'
+import img_4 from './../../assets/images/4.jpg'
 const About = () => {
   return (
     <section className='page-section' id='about'>
@@ -8,7 +12,7 @@ const About = () => {
         <div className='text-center'>
           <h2 className='section-heading text-uppercase'>About</h2>
           <h3 className='section-subheading text-muted'>
-            Lorem ipsum dolor sit amet consectetur.
+            Our organisation and what we do.
           </h3>
         </div>
         <ul className='timeline'>
@@ -16,7 +20,7 @@ const About = () => {
             <div className='timeline-image'>
               <img
                 className='rounded-circle img-fluid'
-                src='assets/img/about/1.jpg'
+                src={img_1}
                 alt='...'
               />
             </div>
@@ -39,7 +43,7 @@ const About = () => {
             <div className='timeline-image'>
               <img
                 className='rounded-circle img-fluid'
-                src='assets/img/about/2.jpg'
+                src={img_2}
                 alt='...'
               />
             </div>
@@ -62,7 +66,7 @@ const About = () => {
             <div className='timeline-image'>
               <img
                 className='rounded-circle img-fluid'
-                src='assets/img/about/3.jpg'
+                src={img_3}
                 alt='...'
               />
             </div>
@@ -85,7 +89,7 @@ const About = () => {
             <div className='timeline-image'>
               <img
                 className='rounded-circle img-fluid'
-                src='assets/img/about/4.jpg'
+                src={img_4}
                 alt='...'
               />
             </div>

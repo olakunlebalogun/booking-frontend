@@ -7,6 +7,7 @@ import ForgetPassword from '../pages/ForgetPassword'
 import Booking from './../pages/Booking'
 import SuccessfulBooking from '../pages/SuccessfulBooking'
 import Dashboard from '../pages/Dashboard'
+import Page404 from './../pages/errors/Page404'
 
 
 
@@ -26,9 +27,12 @@ const AppRouter = () => {
 
 {/* Admin routes */}
         <Route path='admin/dashboard' element={<Dashboard />} />
+        <Route path='*' element={<Page404 />} />
+
 
 
       </Routes>
+
   )
 }
 

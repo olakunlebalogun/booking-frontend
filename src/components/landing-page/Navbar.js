@@ -52,14 +52,20 @@ const Navbar = () => {
                 Contact
               </a>
             </li>
-            <li className='nav-item'>
-              {/* <a className='nav-link' href=''>
+            {/* <li className='nav-item'>
+              <Link to='/booking' className='nav-link'>
                 Book
-              </a> */}
-              {/* <div className='small'> */}
-                {/* <a href='register.html'>Need an account? Sign up!</a> */}
-                <Link to='/booking' className='nav-link'>Book</Link>
-              {/* </div> */}
+              </Link>
+            </li> */}
+            <li className='nav-item'>
+              <Link to='/login' className='nav-link'>
+                Sign in
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='/signup' className='nav-link'>
+                Sign up
+              </Link>
             </li>
           </ul>
         </div>
