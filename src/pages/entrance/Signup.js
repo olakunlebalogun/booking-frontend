@@ -4,36 +4,36 @@ import axios from 'axios'
 
 import './../../assets/css/pages/entrance/Signup.css'
 
-const Signup = () => {
 
+const Signup = () => {
   const [data, setData] = useState({
-    firstName: "lanre",
-    lastName: "balogun",
-    email: "larryfu",
+    firstName: "",
+    lastName: "",
+    email: "",
     password: "",
     userName: "",
     phone: ""
   });
-  const [error, setError] = useState("")
-  const navigate = useNavigate()
+ const [error, setError] = useState("")
 
   //const{firstName,lastName,email,password,userName,phone}=signUp;
   const onInputChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value })
   }
 
+  const navigate = useNavigate()
   const onCreateAccount = async (e) => {
     e.preventDefault();
-    const out = await axios.post("http://localhost:7000/api/v1/auth/signup", data)
-    if (out) {
+    console.log(data)
+    const a = await axios.post("http://localhost:7000/api/v1/auth/signup", data)
+     if (a) {
       navigate('/login')
-    } else {
-      setError(out)
-      console.log(error);
+   } else {
+      setError(a)
     }
   }
   return (
-    
+
 
     <div id='booking' className='section bg-dark'>
       <div className='section-center'>
@@ -43,35 +43,35 @@ const Signup = () => {
               <div className='form-header rounded-top'>
                 <h1 className='text-center'> Create Account</h1>
               </div>
-              <form>
+              <form onSubmit={onCreateAccount}>
                 <div className='row'>
                   <div className='form-group col-6'>
                     <span className='form-label'>Firstname</span>
-                    <input className='form-control' type='text' />
+                    <input className='form-control' type='text' name='firstName' value={data.firstName} onChange={onInputChange} />
                   </div>
                   <div className='form-group col-6'>
                     <span className='form-label'>Lastname</span>
-                    <input className='form-control' type='text' />
+                    <input className='form-control' type='text' name='lastName' value={data.lastName} onChange={onInputChange} />
                   </div>
                 </div>
                 <div className='row'>
                   <div className='form-group col-6'>
                     <span className='form-label'>Email</span>
-                    <input className='form-control' type='email' />
+                    <input className='form-control' type='email' name='email' value={data.email} onChange={onInputChange} />
                   </div>
                   <div className='form-group col-6'>
                     <span className='form-label'>Password</span>
-                    <input className='form-control' type='password' />
+                    <input className='form-control' type='password' name='password' value={data.password} onChange={onInputChange} />
                   </div>
                 </div>
                 <div className='row'>
                   <div className='form-group col-6'>
                     <span className='form-label'>Username</span>
-                    <input className='form-control' type='text' />
+                    <input className='form-control' type='text' name='userName' value={data.userName} onChange={onInputChange} />
                   </div>
                   <div className='form-group col-6'>
                     <span className='form-label'>Phone Number</span>
-                    <input className='form-control' type='phone' />
+                    <input className='form-control' type='phone' name='phone' value={data.phone} onChange={onInputChange} />
                   </div>
                 </div>
 
@@ -89,7 +89,7 @@ const Signup = () => {
                 <div className='form-btn'>
                   <button
                     className='submit-btn col-12'
-                    onClick={() => onCreateAccount()}
+                    type='submit'
                   >
                     Create account
                   </button>
