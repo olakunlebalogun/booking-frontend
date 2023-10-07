@@ -63,7 +63,7 @@ const Booking = () => {
                   </div>
                 </div>
                 <div className='form-btn'>
-                  <button className='submit-btn'>Book Appointment</button>
+                  <button className='btn btn-primary'>Book Appointment</button>
                 </div>
               </form>
             </div>
