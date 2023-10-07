@@ -7,35 +7,34 @@ import axios from 'axios'
 import { useState } from 'react'
 
 const Signup = () => {
-  const [data,setData] = useState({
-    firstName:"lanre",
-    lastName:"balogun",
-    email:"larryfu",
-    password:"",
-    userName:"",
-    phone:""
+  const [data, setData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    userName: "",
+    phone: ""
   });
+ const [error, setError] = useState("")
 
   //const{firstName,lastName,email,password,userName,phone}=signUp;
-  const onInputChange=(e)=>{
-    setData({...data,[e.target.name]:e.target.value})
+  const onInputChange = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value })
   }
-  const saveSignUp=(e)=>{
+
+  const navigate = useNavigate()
+  const onCreateAccount = async (e) => {
+    e.preventDefault();
     console.log(data)
-  }
-
-  	const navigate = useNavigate()
-    const onCreateAccount = async (e) => {
-      e.preventDefault();
-
-   // const a =  await axios.post("http://localhost:7000/api/v1/auth/signup",signUp)
-      // Create a new account by interrracting with the appropriate endpoint
-      // Route to login
-      console.log("This is thhe signUp payload ")
-     navigate('/login')
+    const a = await axios.post("http://localhost:7000/api/v1/auth/signup", data)
+     if (a) {
+      navigate('/login')
+   } else {
+      setError(a)
     }
+  }
   return (
-    
+
 
     <div id='booking' className='section bg-dark'>
       <div className='section-center'>
@@ -45,35 +44,35 @@ const Signup = () => {
               <div className='form-header rounded-top'>
                 <h1 className='text-center'> Create Account</h1>
               </div>
-              <form onSubmit={saveSignUp}>
+              <form onSubmit={onCreateAccount}>
                 <div className='row'>
                   <div className='form-group col-6'>
                     <span className='form-label'>Firstname</span>
-                    <input className='form-control' type='text' name='firstName' value={data.firstName} onChange={onInputChange}/>
+                    <input className='form-control' type='text' name='firstName' value={data.firstName} onChange={onInputChange} />
                   </div>
                   <div className='form-group col-6'>
                     <span className='form-label'>Lastname</span>
-                    <input className='form-control' type='text' name='lastName' value={data.lastName} onChange={onInputChange}/>
+                    <input className='form-control' type='text' name='lastName' value={data.lastName} onChange={onInputChange} />
                   </div>
                 </div>
                 <div className='row'>
                   <div className='form-group col-6'>
                     <span className='form-label'>Email</span>
-                    <input className='form-control' type='email' name='email' value={data.email} onChange={onInputChange}/>
+                    <input className='form-control' type='email' name='email' value={data.email} onChange={onInputChange} />
                   </div>
                   <div className='form-group col-6'>
                     <span className='form-label'>Password</span>
-                    <input className='form-control' type='password' name='password' value={data.password} onChange={onInputChange}/>
+                    <input className='form-control' type='password' name='password' value={data.password} onChange={onInputChange} />
                   </div>
                 </div>
                 <div className='row'>
                   <div className='form-group col-6'>
                     <span className='form-label'>Username</span>
-                    <input className='form-control' type='text' name='username' value={data.userName} onChange={onInputChange}/>
+                    <input className='form-control' type='text' name='userName' value={data.userName} onChange={onInputChange} />
                   </div>
                   <div className='form-group col-6'>
                     <span className='form-label'>Phone Number</span>
-                    <input className='form-control' type='phone' name='phone' value={data.phone} onChange={onInputChange}/>
+                    <input className='form-control' type='phone' name='phone' value={data.phone} onChange={onInputChange} />
                   </div>
                 </div>
 
