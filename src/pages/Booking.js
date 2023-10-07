@@ -1,9 +1,12 @@
 import React from 'react'
+// import api from './../api/data';
 
 
 import './../assets/css/pages/Booking.css'
 
 const Booking = () => {
+
+
   return (
     <div id='booking' className='section bg-dark'>
       <div className='section-center'>

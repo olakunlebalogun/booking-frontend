@@ -44,7 +44,7 @@
 }
 
 .booking-form .form-control {
-	background-color: #1c2126;
+	/* background-color: #1c2126; */
 	height: 50px;
 	padding: 7px 20px 0px;
 	border: none;
@@ -103,7 +103,7 @@
 }
 
 .booking-form .form-group:not( .input-not-empty) .form-control:not( :focus) {
-	color: transparent;
+	color: black;
 }
 
 .booking-form .form-group .form-control:focus+.form-label {
