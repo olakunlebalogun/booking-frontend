@@ -52,11 +52,8 @@ const Navbar = () => {
                 Contact
               </a>
             </li>
-            {/* <li className='nav-item'>
-              <Link to='/booking' className='nav-link'>
-                Book
-              </Link>
-            </li> */}
+           
+          
             <li className='nav-item'>
               <Link to='/login' className='nav-link'>
                 Sign in
