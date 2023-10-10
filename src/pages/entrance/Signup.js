@@ -11,7 +11,7 @@ const Signup = () => {
     lastName: "",
     email: "",
     password: "",
-    userName: "",
+    appUserName: "",
     phone: ""
   });
  const [error, setError] = useState("")
@@ -92,8 +92,8 @@ const Signup = () => {
                     <input
                       className='form-control'
                       type='text'
-                      name='userName'
-                      value={data.userName}
+                      name='appUserName'
+                      value={data.appUserName}
                       onChange={onInputChange}
                     />
                   </div>

@@ -1,11 +1,36 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-
+import { useState } from 'react'
+import axios from 'axios'
 import './../../assets/css/pages/entrance/Login.css'
 const Login = () => {
+  
+  const [data, setData] = useState({
+    email: "",
+    password: ""
+  });
+ const [error, setError] = useState("")
+
+ const onInputChange = (e) => {
+  setData({ ...data, [e.target.name]: e.target.value })
+}
   const navigate = useNavigate()
-  const onLogin = () => {
-    navigate('/landing')
+  const onLogin = async (e) => {
+    e.preventDefault();
+    console.log(data)
+    const a = await axios.post("http://localhost:7000/api/v1/auth/login", data)
+    console.log(a.data.data.accountType);
+     if (a) {
+      if(a.data.data.accountType==="USER"){
+        navigate('/landing')
+      }
+      else{
+        navigate('/admin/dashboard')
+      }
+     
+   } else {
+      setError(a)
+    }
   }
   return (
     <div className='section bg-dark'>
@@ -16,14 +41,18 @@ const Login = () => {
               <div className='form-header rounded-top' id='header'>
                 <h1>Login</h1>
               </div>
-              <form>
+              <form onSubmit={onLogin}>
                 <div className='form-group'>
                   <span className='form-label'>Email</span>
-                  <input className='form-control' type='email' />
+                  <input className='form-control' type='email'  name='email'
+                      value={data.email}
+                      onChange={onInputChange}/>
                 </div>
                 <div className='form-group'>
                   <span className='form-label'>Password</span>
-                  <input className='form-control' type='password' />
+                  <input className='form-control' type='password'  name='password'
+                      value={data.password}
+                      onChange={onInputChange}/>
                 </div>
                 <div className='form-check mb-3'>
                   <input
@@ -43,7 +72,7 @@ const Login = () => {
                   <Link to='/forgot-password' className='small'>
                     Forgot Password?
                   </Link>
-                  <button className='btn btn-primary' onClick={() => onLogin()}>
+                  <button className='btn btn-primary'  type='submit'>
                     Login
                   </button>
                 </div>
