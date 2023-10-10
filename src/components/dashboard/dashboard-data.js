@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 export const lineChartData = [
   {
     id: 1,
@@ -62,12 +64,22 @@ export const lineChartData = [
   },
 ]
 
+const count = async() => {
+    const {data} = await axios.get('http://localhost:7000/api/v1/dashboard')
+    // console.log(data)
+    return data.data
+} 
 
+console.log(count());
+
+
+// const value = getSingleValue()
 export const cardOneList = [
   {
     id: 1,
     name: '',
-    count: 400,
+    // count: `${value}`,
+    count: `100`,
     color: 'green',
   },
   {
