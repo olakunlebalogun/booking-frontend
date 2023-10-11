@@ -73,7 +73,7 @@ const SuccessfulBooking = () => {
         </div>
         <div className='text-center'>
           <h1>Thank You !</h1>
-          <p>We've send the link to your inbox. Lorem ipsum dolor sit, </p>
+          <p>We've sent a confirmation/welcome message to your inbox.</p>
           <button className='btn btn-primary' onClick={() => onSuccess()}>
             Back Home
           </button>

@@ -81,32 +81,43 @@ const Booking = () => {
                 </div>
 
                 <div className='form-group'>
-                  <div className='form-checkbox'>
+                  <div className='form-radio'>
                     <p>
                       Select appointment type <span>(Choose atleast one)</span>
                     </p>
 
                     <label htmlFor='NIN'>
                       <input
-                        className='form-check-input'
-                        type='checkbox'
-                        id='nin'
-                        name='service_bvn'
-                        value={data.service}
+                        className='form-radio-input'
+                        type='radio'
+                        id='service1'
+                        name='service'
+                        value="NIN"
                         onChange={onInputChange}
                       />
                       <span></span>NIN
                     </label>
                     <label htmlFor='BVN'>
                       <input
-                        className='form-check-input'
-                        type='checkbox'
-                        id='bvn'
-                        name='service_bvn'
-                        value={data.service}
+                        className='form-radio-input'
+                        type='radio'
+                        id='service2'
+                        name='service'
+                        value="BVN"
                         onChange={onInputChange}
                       />
                       <span></span>BVN
+                    </label>
+                    <label htmlFor='BOTH'>
+                      <input
+                        className='form-radio-input'
+                        type='radio'
+                        id='service3'
+                        name='service'
+                        value="BOTH"
+                        onChange={onInputChange}
+                      />
+                      <span></span>BOTH
                     </label>
                   </div>
                 </div>
