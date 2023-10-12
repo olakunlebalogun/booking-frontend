@@ -919,7 +919,7 @@ const Dashboard = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'http://localhost:7000/api/v1/dashboard'
+          'http://localhost:7000/api/v1/dashboard/card_values'
         )
         setData(response.data.data)
         // setLoading(false)
