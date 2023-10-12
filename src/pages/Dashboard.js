@@ -922,7 +922,7 @@ const Dashboard = () => {
           'http://localhost:7000/api/v1/dashboard'
         )
         setData(response.data.data)
-        setLoading(false)
+        // setLoading(false)
       } catch (error) {
         console.error('Error fetching data:', error)
       }
