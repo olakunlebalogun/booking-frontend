@@ -911,7 +911,7 @@ export const lineChartData = [
 
 const Dashboard = () => {
   const [data, setData] = useState({})
-  const [loading, setLoading] = useState(true)
+  // const [loading, setLoading] = useState(true)
 
  
   useEffect(() => {
